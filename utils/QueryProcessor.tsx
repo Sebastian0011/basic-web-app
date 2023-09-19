@@ -18,15 +18,14 @@ export default function QueryProcessor(query: string): string {
   } else if (queryString.includes("plus")) {
     const args = queryString.split(" ")
     return (
-      `${args[2] + args[4]}`
+      `${Number(args[2]) + Number(args[4])}`
     )
   } else if (queryString.includes("largest")) {
     const args = queryString.split(" ")
     return (
-      `${Math.max(args[8], args[9], args[10])}`
+      `${Math.max(Number(args[8]), Number(args[9]), Number(args[10]))}`
     )
   }
-  
 
   return "";
 }
