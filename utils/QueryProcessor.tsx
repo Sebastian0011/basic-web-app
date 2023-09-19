@@ -15,7 +15,13 @@ export default function QueryProcessor(query: string): string {
     return (
       "Sebastian"
     )
+  } else if (queryString.includes("plus")) {
+    const args = queryString.split(" ")
+    return (
+      `${args[2] + args[4]}`
+    )
   }
+  
 
   return "";
 }
