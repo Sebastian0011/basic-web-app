@@ -25,6 +25,11 @@ export default function QueryProcessor(query: string): string {
     return (
       `${Math.max(Number(args[8]), Number(args[9]), Number(args[10]))}`
     )
+  } else if (queryString.includes("multiply")) {
+    const args = queryString.split(" ")
+    return (
+      `${Number(args[2]) * Number(args[5])}`
+    )
   }
 
   return "";
