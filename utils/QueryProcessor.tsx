@@ -24,21 +24,21 @@ export default function QueryProcessor(query: string): string {
   if (queryString.includes("plus")) {
     const args = queryString.split(" ")
     return (
-      `${Number(args[2]) + Number(args[4])}`
+      `${parseInt(args[2]) + parseInt(args[4])}`
     )
   } 
   
   if (queryString.includes("largest")) {
     const args = queryString.split(" ")
     return (
-      `${Math.max(Number(args[8]), Number(args[9]), Number(args[10]))}`
+      `${Math.max(parseInt(args[8]), parseInt(args[9]), parseInt(args[10]))}`
     )
   } 
   
-  if (queryString.includes("multiply")) {
+  if (queryString.includes("multiplied")) {
     const args = queryString.split(" ")
     return (
-      `${Number(args[2]) * Number(args[5])}`
+      `${parseInt(args[2]) * parseInt(args[5])}`
     )
   }
 
