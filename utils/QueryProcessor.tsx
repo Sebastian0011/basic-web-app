@@ -13,7 +13,7 @@ export default function QueryProcessor(query: string): string {
     )
   } else if (queryString.includes("What is your name?")) {
     return (
-      "Your name is Sebastian"
+      "Sebastian"
     )
   }
 
