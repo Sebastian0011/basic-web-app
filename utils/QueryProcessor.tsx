@@ -27,6 +27,13 @@ export default function QueryProcessor(query: string): string {
       `${parseInt(args[2]) + parseInt(args[4])}`
     )
   } 
+
+  if (queryString.includes("minus")) {
+    const args = queryString.split(" ")
+    return (
+      `${parseInt(args[2]) - parseInt(args[4])}`
+    )
+  } 
   
   if (queryString.includes("largest")) {
     const args = queryString.split(" ")
@@ -42,6 +49,17 @@ export default function QueryProcessor(query: string): string {
     )
   }
 
-  
+  if (queryString.includes("square")) {
+    const args = queryString.split(" ")
+    for (let i = 12; i < args.length; i += 1) {
+      // if math.sqrt(parseInt(args[i]))
+    }
+    return (
+      `${parseInt(args[2]) * parseInt(args[5])}`
+    )
+  }
+
+  // cbrt
+
   return "";
 }
