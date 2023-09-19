@@ -20,6 +20,11 @@ export default function QueryProcessor(query: string): string {
     return (
       `${args[2] + args[4]}`
     )
+  } else if (queryString.includes("largest")) {
+    const args = queryString.split(" ")
+    return (
+      `${Math.max(args[8], args[9], args[10])}`
+    )
   }
   
 
