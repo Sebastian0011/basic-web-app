@@ -11,11 +11,11 @@ export default function QueryProcessor(query: string): string {
     return (
       "Your andrew id is hello!!"
     )
-  } else if (queryString.includes("your name")) {
+  } else if (queryString.includes("What is your name?")) {
     return (
       "Your name is Sebastian"
     )
   }
-  
+
   return "";
 }
