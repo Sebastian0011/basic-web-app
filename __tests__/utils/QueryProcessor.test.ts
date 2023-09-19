@@ -25,4 +25,12 @@ describe("QueryProcessor", () => {
             "Your andrew id is hello!!"
           ));
     });
+
+    test('should return andrew id description', () => {
+        const query = "your name";
+        const response: string = QueryProcessor(query);
+        expect(response).toBe((
+            "Your name is Sebastian"
+          ));
+    });
 });
